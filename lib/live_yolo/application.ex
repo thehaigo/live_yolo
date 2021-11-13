@@ -13,9 +13,9 @@ defmodule LiveYolo.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: LiveYolo.PubSub},
       # Start the Endpoint (http/https)
-      LiveYoloWeb.Endpoint
+      LiveYoloWeb.Endpoint,
       # Start a worker by calling: LiveYolo.Worker.start_link(arg)
-      # {LiveYolo.Worker, arg}
+      {LiveYolo.Worker, [name: LiveYolo.Worker]},
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
